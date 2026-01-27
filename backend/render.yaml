@@ -1,0 +1,37 @@
+databases:
+  - name: chemical-equipment-db
+    databaseName: chemical_db
+    user: chemical_user
+    plan: free
+
+services:
+  # Backend API
+  - type: web
+    name: chemical-equipment-api
+    runtime: python
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn backend.wsgi:application"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: chemical-equipment-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: CORS_ALLOW_ALL
+        value: "True"
+      - key: PYTHON_VERSION
+        value: "3.11.0"
+
+  # Frontend React App
+  - type: web
+    name: chemical-equipment-frontend
+    runtime: static
+    buildCommand: "cd frontend-web && npm install && npm run build"
+    staticPublishPath: "./frontend-web/build"
+    envVars:
+      - key: REACT_APP_API_URL
+        value: "https://chemical-equipment-api.onrender.com/api"
