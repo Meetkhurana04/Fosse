@@ -1,0 +1,5 @@
+# frontend
+frontend-web/node_modules/
+frontend-web/.env.production
+frontend-web/.env
+frontend-web/node_modules/.cache/
