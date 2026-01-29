@@ -127,7 +127,7 @@ function History({ onSelectDataset }) {
               onClick={() => handleSelect(dataset.id)}
             >
               <div className="history-item-info">
-                <h4>📄 {dataset.name}</h4>
+                <h4> {dataset.name}</h4>
                 <p>Uploaded: {formatDate(dataset.uploaded_at)}</p>
               </div>
               
@@ -166,7 +166,7 @@ function History({ onSelectDataset }) {
                     cursor: 'pointer'
                   }}
                 >
-                  🗑️ Delete
+                   Delete
                 </button>
               </div>
             </div>

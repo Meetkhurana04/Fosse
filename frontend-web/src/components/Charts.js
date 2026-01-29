@@ -227,7 +227,7 @@ function Charts({ dataset }) {
 
   return (
     <div className="charts-container">
-      <h2>📈 Data Visualization</h2>
+      <h2> Data Visualization</h2>
       
       <div className="charts-grid">
         {/* Pie Chart - Type Distribution */}

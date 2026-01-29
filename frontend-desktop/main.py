@@ -227,7 +227,7 @@ class UploadTab(QWidget):
         layout.setContentsMargins(20, 20, 20, 20)
         
         # Title
-        title = QLabel("📤 Upload Equipment Data")
+        title = QLabel(" Upload Equipment Data")
         title.setFont(QFont("Arial", 18, QFont.Bold))
         title.setAlignment(Qt.AlignCenter)
         layout.addWidget(title)
@@ -278,7 +278,7 @@ class UploadTab(QWidget):
         layout.addWidget(self.progress_bar)
         
         # Upload button
-        self.upload_btn = QPushButton("🚀 Upload & Analyze")
+        self.upload_btn = QPushButton(" Upload & Analyze")
         self.upload_btn.setFont(QFont("Arial", 14))
         self.upload_btn.setMinimumHeight(50)
         self.upload_btn.setStyleSheet("""
@@ -500,7 +500,7 @@ class DataTableTab(QWidget):
         # Title and search bar
         header_layout = QHBoxLayout()
         
-        title = QLabel("📋 Equipment Data Table")
+        title = QLabel(" Equipment Data Table")
         title.setFont(QFont("Arial", 18, QFont.Bold))
         header_layout.addWidget(title)
         
@@ -624,7 +624,7 @@ class ChartsTab(QWidget):
         layout.setContentsMargins(20, 20, 20, 20)
         
         # Title
-        title = QLabel("📈 Data Visualization")
+        title = QLabel(" Data Visualization")
         title.setFont(QFont("Arial", 18, QFont.Bold))
         layout.addWidget(title)
         
@@ -736,13 +736,13 @@ class HistoryTab(QWidget):
         # Title and refresh button
         header_layout = QHBoxLayout()
         
-        title = QLabel("🕐 Upload History (Last 5 Datasets)")
+        title = QLabel(" Upload History (Last 5 Datasets)")
         title.setFont(QFont("Arial", 18, QFont.Bold))
         header_layout.addWidget(title)
         
         header_layout.addStretch()
         
-        self.refresh_btn = QPushButton("🔄 Refresh")
+        self.refresh_btn = QPushButton(" Refresh")
         self.refresh_btn.setStyleSheet("""
             QPushButton {
                 background-color: #3498db;
@@ -1007,7 +1007,7 @@ class MainWindow(QMainWindow):
         self.load_initial_data()
     
     def setup_ui(self):
-        self.setWindowTitle("⚗️ Chemical Equipment Visualizer")
+        self.setWindowTitle(" Chemical Equipment Visualizer")
         self.setMinimumSize(1200, 800)
         
         # Set application style

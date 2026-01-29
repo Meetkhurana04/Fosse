@@ -87,13 +87,13 @@ function DataTable({ data }) {
 
   return (
     <div className="data-table-container">
-      <h2>📋 Equipment Data Table</h2>
+      <h2> Equipment Data Table</h2>
       
       {/* Search input */}
       <div style={{ marginBottom: '1rem' }}>
         <input
           type="text"
-          placeholder="🔍 Search by name or type..."
+          placeholder=" Search by name or type..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           style={{

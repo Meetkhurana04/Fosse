@@ -20,7 +20,7 @@ function Summary({ dataset }) {
 
   return (
     <div className="summary-container">
-      <h2>📊 Dataset Summary: {dataset.name}</h2>
+      <h2> Dataset Summary: {dataset.name}</h2>
       
       {/* Main Statistics Cards */}
       <div className="summary-grid">
@@ -47,7 +47,7 @@ function Summary({ dataset }) {
 
       {/* Statistics Table */}
       <div style={{ marginTop: '2rem' }}>
-        <h3 style={{ marginBottom: '1rem' }}>📈 Parameter Statistics</h3>
+        <h3 style={{ marginBottom: '1rem' }}> Parameter Statistics</h3>
         <table className="data-table">
           <thead>
             <tr>
@@ -86,7 +86,7 @@ function Summary({ dataset }) {
 
       {/* Type Distribution */}
       <div className="type-distribution">
-        <h3>🏭 Equipment Type Distribution</h3>
+        <h3>Equipment Type Distribution</h3>
         <div className="type-list">
           {Object.entries(summary.type_distribution).map(([type, count]) => (
             <div key={type} className="type-item">

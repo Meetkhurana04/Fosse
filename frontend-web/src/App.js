@@ -9,6 +9,8 @@
  * - Layout and styling
  */
 
+
+
 import React, { useState, useEffect } from 'react';
 import FileUpload from './components/FileUpload';
 import DataTable from './components/DataTable';
@@ -123,7 +125,7 @@ function App() {
       {/* Header */}
       <header className="app-header">
         <div className="header-content">
-          <h1>⚗️ Chemical Equipment Visualizer</h1>
+          <h1>Chemical Equipment Visualizer</h1>
           <div className="header-actions">
             {isAuthenticated ? (
               <div className="user-info">
@@ -150,34 +152,34 @@ function App() {
           className={`nav-btn ${activeTab === 'upload' ? 'active' : ''}`}
           onClick={() => setActiveTab('upload')}
         >
-          📤 Upload
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 25 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg> Upload
         </button>
         <button 
           className={`nav-btn ${activeTab === 'summary' ? 'active' : ''}`}
           onClick={() => setActiveTab('summary')}
           disabled={!currentDataset}
         >
-          📊 Summary
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 25 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg> Summary
         </button>
         <button 
           className={`nav-btn ${activeTab === 'table' ? 'active' : ''}`}
           onClick={() => setActiveTab('table')}
           disabled={!currentDataset}
         >
-          📋 Data Table
+          <svg width="16" height="16" viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg> Data Table
         </button>
         <button 
           className={`nav-btn ${activeTab === 'charts' ? 'active' : ''}`}
           onClick={() => setActiveTab('charts')}
           disabled={!currentDataset}
         >
-          📈 Charts
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 25 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg> Charts
         </button>
         <button 
           className={`nav-btn ${activeTab === 'history' ? 'active' : ''}`}
           onClick={() => setActiveTab('history')}
         >
-          🕐 History
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> History
         </button>
       </nav>
 
@@ -216,7 +218,7 @@ function App() {
                 className="btn-download-pdf"
                 onClick={handleDownloadPDF}
               >
-                📄 Download PDF Report
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Download PDF Report
               </button>
             </div>
           )}

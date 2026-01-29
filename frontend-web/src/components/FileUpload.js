@@ -111,7 +111,7 @@ function FileUpload({ onUploadSuccess }) {
 
   return (
     <div className="file-upload">
-      <h2>📤 Upload Equipment Data</h2>
+      <h2> Upload Equipment Data</h2>
       <p style={{ color: '#666', marginBottom: '1.5rem' }}>
         Upload a CSV file containing equipment parameters
       </p>
@@ -160,7 +160,7 @@ function FileUpload({ onUploadSuccess }) {
         onClick={handleUpload}
         disabled={!selectedFile || uploading}
       >
-        {uploading ? '⏳ Uploading...' : '🚀 Upload & Analyze'}
+        {uploading ? '⏳ Uploading...' : ' Upload & Analyze'}
       </button>
       
       {/* Instructions */}
